@@ -1,2 +1,3 @@
-require './app'
-run StoryTree
+require './config/environment'
+
+run ApplicationController
