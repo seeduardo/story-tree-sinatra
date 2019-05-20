@@ -2,31 +2,43 @@
 
 <html>
 
-<table style="border:1px solid black;">
+<table style="border:1px solid black; border-collapse:collapse">
     <tr>
       <td style="border:1px solid black;"></td>
       <td style="border:1px solid black;">
-        <textarea name="up" rows="5" cols="30"></textarea><br>
+        <textarea name="up" rows="4" cols="25"></textarea><br>
         <input type="submit" value="Submit">
       </td>
       <td style="border:1px solid black;"></td>
     </tr>
     <tr>
       <td style="border:1px solid black;">
-        <textarea name="left" rows="5" cols="30"></textarea><br>
-        <input type="submit" value="Submit">
+        <!-- <textarea name="left" rows="4" cols="25"></textarea><br>
+        <input type="submit" value="Submit"> -->
+        <% if !params[:left] %>
+          <form action="/" method="post">
+            <textarea name="up" rows="4" cols="25"></textarea><br>
+            <input type="submit" value="Submit">
+
+          </form>
+
+        <% else %>
+          <%= link_to "#{params[:left]}" %>
+        <% end %>
       </td>
       <td style="border:1px solid black;">
+        Once upon a time, there was an elegant sea otter.
       </td>
       <td style="border:1px solid black;">
-      <textarea name="right" rows="5" cols="30"></textarea><br>
+      <textarea name="right" rows="4" cols="25"></textarea><br>
         <input type="submit" value="Submit">
       </td>
     </tr>
     <tr>
-      <td style="border:1px solid black;"></td>
       <td style="border:1px solid black;">
-        <textarea name="down" rows="5" cols="30"></textarea><br>
+      </td>
+      <td style="border:1px solid black;">
+        <textarea name="down" rows="4" cols="25"></textarea><br>
         <input type="submit" value="Submit">
       </td>
       <td style="border:1px solid black;"></td>

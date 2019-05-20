@@ -9,4 +9,8 @@ class ApplicationController < Sinatra::Base
     erb :story_tree
   end
 
+  post '/' do
+    'This is a placeholder'
+  end
+
 end
